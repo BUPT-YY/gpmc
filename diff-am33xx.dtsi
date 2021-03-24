@@ -1,0 +1,7 @@
+root@yong:~# export KERDTSPATH=ti-processor-sdk-linux-am335x-evm-06.03.00.106/board-support/linux-4.19.94+gitAUTOINC+be5389fd85-gbe5389fd85/arch/arm/boot/dts
+root@yong:~# diff /opt/${KERDTSPATH}/am33xx.dtsi /tmp/${KERDTSPATH}/am33xx.dtsi
+1084c1084
+< 			status = "okay";
+---
+> 			status = "disabled";
+root@yong:~# 
