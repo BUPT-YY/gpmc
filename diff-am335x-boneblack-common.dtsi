@@ -1,0 +1,9 @@
+root@yong:~# diff /opt/${KERDTSPATH}/am335x-boneblack-common.dtsi /tmp/${KERDTSPATH}/am335x-boneblack-common.dtsi
+26c26
+< 	status = "disabled";
+---
+> 	status = "okay";
+68c68
+< 			//AM33XX_IOPAD(0x86c, PIN_OUTPUT_PULLDOWN | MUX_MODE7) /* gpmc_a11.GPIO1_27 */
+---
+> 			AM33XX_IOPAD(0x86c, PIN_OUTPUT_PULLDOWN | MUX_MODE7) /* gpmc_a11.GPIO1_27 */
