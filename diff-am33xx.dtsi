@@ -5,3 +5,24 @@ root@yong:~# diff /opt/${KERDTSPATH}/am33xx.dtsi /tmp/${KERDTSPATH}/am33xx.dtsi
 ---
 > 			status = "disabled";
 root@yong:~# 
+
+
+Remark:将GPMC节点由disabled改为okay.
+		gpmc: gpmc@50000000 {
+			compatible = "ti,am3352-gpmc";
+			ti,hwmods = "gpmc";
+			ti,no-idle-on-init;
+			reg = <0x50000000 0x2000>;
+			interrupts = <100>;
+			dmas = <&edma 52 0>;
+			dma-names = "rxtx";
+			gpmc,num-cs = <7>;
+			gpmc,num-waitpins = <2>;
+			#address-cells = <2>;
+			#size-cells = <1>;
+			interrupt-controller;
+			#interrupt-cells = <2>;
+			gpio-controller;
+			#gpio-cells = <2>;
+			status = "okay";
+		};
